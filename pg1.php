@@ -49,7 +49,10 @@ catch(PDOException $e)
 }
 if(isset($_POST['submit']))
 {
-   $query="INSERT into signup(Usn,Email,Password) values('$_POST['usn']','$_POST['email']','$_POST['password']')";
+	$usn=$_POST['usn'];
+    $email=$_POST['email'];
+    $password=$_POST['psw'];
+   $query="INSERT into signup(Usn,Email,Password) values('$usn,'$email','$password')";
    //$result=pg_query($query);
    $stmt=$this->pdo->prepare($query);
    $stmt->execute();
