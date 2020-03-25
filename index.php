@@ -66,8 +66,8 @@ if(isset($_POST['submit']))
      $password=$_POST['psw'];
 if($usn!=''&&$password!='')
  {
-   $query="select * from signup where Usn='".$usn."' and Password='".$password."'";
-   $result=pg_query($query);
+   $query="select * from signup where USN='".$usn."' and Password='".$password."'";
+   $result=pg_query($conn,$query);
    //$stmt=$this->pdo->prepare($query);
    //$stmt->execute();
 if($result)
