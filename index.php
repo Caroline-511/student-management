@@ -46,20 +46,19 @@ if($usn!=''&&$password!='')
 
 
 <?php
-try
-{
+
 	$host="ec2-34-200-101-236.compute-1.amazonaws.com";
 	$dbname="d6i1p71shucj0g";
 	$usr='pngpwmkkjntvqf';
 	$port="5432";
 	$password="38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
 	$conn=pg_connect("dbname=$dbname");
-}
-catch(PDOException $e)
+
+/*catch(PDOException $e)
 {
 	echo "Error : " .$e->getMessage() . "<br/>";
 	die();
-}
+}*/
 if(isset($_POST['submit']))
 {
      $usn=$_POST['usn'];
@@ -70,7 +69,7 @@ if($usn!=''&&$password!='')
    $result=pg_query($conn,$query);
    //$stmt=$this->pdo->prepare($result);
    //$stmt->execute();
-if($result)
+if(!$result)
 {
     $_SESSION['usn']=$usn;
     header('location:icon.php?usn='.$usn);
