@@ -52,10 +52,10 @@ if(isset($_POST['submit']))
     $email=$_POST['email'];
     $password=$_POST['psw'];
    $query="INSERT into signup(Usn,Email,Password) values('$usn,'$email','$password')";
-   //$result=pg_query($query);
-   $stmt=$this->pdo->prepare($query);
-   $stmt->execute();
-if(!stmt)
+   $result=pg_query($query);
+   //$stmt=$this->pdo->prepare($query);
+   //$stmt->execute();
+if(!result)
  echo $conn->errorCode();
 else
 	header('Location:index.php');
@@ -215,7 +215,7 @@ mark1{
     <!--<label for="psw-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" required>-->
 
-	  <p><b>Already Registered?</b> <a href="pg2.php"><b>Login</b></a></p>
+	  <p><b>Already Registered?</b> <a href="index.php"><b>Login</b></a></p>
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
