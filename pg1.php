@@ -40,7 +40,6 @@ try
 	$port="5432";
 	$password="38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
 	$conn=new PDO("pgsql:host=$host;dbname=$dbname",$usr,$password);
-	header('Location:index.php');
 }
 catch(PDOException $e)
 {
@@ -195,7 +194,7 @@ mark1{
   <body id="body-color" style="background:url(img1.jpg); background-repeat:no-repeat;background-size:100%">
 
     <div class="sidenav">
-        <br/><br/><a href="pg2.php">Login</a><br/><br/>
+        <br/><br/><a href="index.php">Login</a><br/><br/>
         <a href="http://guru.nmamit.in" target="_blank">Moodle</a><br/><br/>
         <a href="http://www.nmamit.nitte.edu.in" target="_blank">College Homepage</a><br/><br/>
     </div>
