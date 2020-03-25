@@ -55,7 +55,7 @@ try{
 	$conn=pg_connect("dbname=$dbname");
 	if(!conn)
 	{
-		echo "error";
+		echo "iglkohkolaaaaaaaaaaaaaaaaaaaaaaaaa"
 		exit;
 	}
 }
