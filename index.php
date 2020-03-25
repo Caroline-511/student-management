@@ -68,9 +68,9 @@ if($usn!=''&&$password!='')
  {
    $query="select * from signup where USN='".$usn."' and Password='".$password."'";
    $result=pg_query($conn,$query);
-   $stmt=$this->pdo->prepare($result);
-   $stmt->execute();
-if($stmt)
+   //$stmt=$this->pdo->prepare($result);
+   //$stmt->execute();
+if($result)
 {
     $_SESSION['usn']=$usn;
     header('location:icon.php?usn='.$usn);

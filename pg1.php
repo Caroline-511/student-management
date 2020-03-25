@@ -46,20 +46,28 @@ catch(PDOException $e)
 	echo "Error : " .$e->getMessage() . "<br/>";
 	die();
 }
-if(isset($_POST['submit']))
+$query="select * from signup";
+foreach($conn->query($query) as $row)
+{
+	print $row['usn'] . " ";
+	print $row['email'] . "-->";
+}
+echo $conn->errorCode();
+
+/*if(isset($_POST['submit']))
 {
 	$usn=$_POST['usn'];
     $email=$_POST['email'];
     $password=$_POST['psw'];
    $query="INSERT into signup(USN,Email,Password) values('$usn,'$email','$password')";
    $result=pg_query($conn,$query);
-   $stmt=$this->pdo->prepare($result);
-   $stmt->execute();
-if(!stmt)
+   //$stmt=$this->pdo->prepare($result);
+   //$stmt->execute();
+if(!result)
  echo $conn->errorCode();
 else
 	header('Location:index.php');
-}
+}*/
 ?>
 
 <!DOCTYPE html>
