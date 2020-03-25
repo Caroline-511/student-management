@@ -53,6 +53,11 @@ try{
 	$port="5432";
 	$password="38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
 	$conn=pg_connect("dbname=$dbname");
+	if(!conn)
+	{
+		echo "error";
+		exit;
+	}
 }
 catch(PgException $e)
 {
@@ -69,7 +74,7 @@ if($usn!=''&&$password!='')
    $result=pg_query($conn,$query);
    //$stmt=$this->pdo->prepare($result);
    //$stmt->execute();
-if(!$result)
+if($result)
 {
     $_SESSION['usn']=$usn;
     header('location:icon.php?usn='.$usn);
