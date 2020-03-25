@@ -47,17 +47,8 @@ if($usn!=''&&$password!='')
 
 <?php
 try{
-	$host="ec2-34-200-101-236.compute-1.amazonaws.com";
-	$dbname="d6i1p71shucj0g";
-	$usr='pngpwmkkjntvqf';
-	$port="5432";
-	$password="38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
-	$conn=pg_connect("dbname=$dbname");
-	if(!conn)
-	{
-		echo "iglkohkolaaaaaaaaaaaaaaaaaaaaaaaaa"
-		exit;
-	}
+	$conn_string="host=ec2-34-200-101-236.compute-1.amazonaws.com dbname=d6i1p71shucj0g usr=pngpwmkkjntvqf port=5432 password=38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
+	$conn=pg_connect($conn_string);
 }
 catch(PgException $e)
 {
