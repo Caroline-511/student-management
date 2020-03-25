@@ -52,7 +52,7 @@ if(isset($_POST['submit']))
     $email=$_POST['email'];
     $password=$_POST['psw'];
    $query="INSERT into signup(Usn,Email,Password) values('$usn,'$email','$password')";
-   $result=pg_query($query);
+   $result=pg_query($conn,$query);
    //$stmt=$this->pdo->prepare($query);
    //$stmt->execute();
 if(!result)
