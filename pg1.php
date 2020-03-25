@@ -53,9 +53,9 @@ if(isset($_POST['submit']))
     $password=$_POST['psw'];
    $query="INSERT into signup(USN,Email,Password) values('$usn,'$email','$password')";
    $result=pg_query($conn,$query);
-   //$stmt=$this->pdo->prepare($query);
-   //$stmt->execute();
-if(!result)
+   $stmt=$this->pdo->prepare($result);
+   $stmt->execute();
+if(!stmt)
  echo $conn->errorCode();
 else
 	header('Location:index.php');
