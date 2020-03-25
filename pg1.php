@@ -46,15 +46,15 @@ catch(PDOException $e)
 	echo "Error : " .$e->getMessage() . "<br/>";
 	die();
 }
-$query="select * from signup";
+/*$query="select * from signup";
 foreach($conn->query($query) as $row)
 {
 	print $row['usn'] . " ";
 	print $row['email'] . "-->";
 }
-echo $conn->errorCode();
+echo $conn->errorCode();*/
 
-/*if(isset($_POST['submit']))
+if(isset($_POST['submit']))
 {
 	$usn=$_POST['usn'];
     $email=$_POST['email'];
@@ -67,7 +67,7 @@ if(!result)
  echo $conn->errorCode();
 else
 	header('Location:index.php');
-}*/
+}
 ?>
 
 <!DOCTYPE html>
