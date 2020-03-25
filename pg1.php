@@ -42,7 +42,7 @@ try
 	$conn=new PDO("pgsql:host=$host;dbname=$dbname",$usr,$password);
 	echo "Success";
 }
-catch(PDOException e)
+catch(PDOException $e)
 {
 	echo "Error : " .$e->getMessage() . "<br/>";
 	die();

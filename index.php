@@ -56,7 +56,7 @@ try
 	$conn=new PDO("pgsql:host=$host;dbname=$dbname",$usr,$password);
 	echo "Success";
 }
-catch(PDOException e)
+catch(PDOException $e)
 {
 	echo "Error : " .$e->getMessage() . "<br/>";
 	die();
@@ -67,7 +67,7 @@ if(isset($_POST['submit']))
      $password=$_POST['psw'];
 if($usn!=''&&$password!='')
  {
-   $query=mysqli_query($conn,"select * from signup where Usn='".$usn."' and Password='".$password."'");
+   $query="select * from signup where Usn='".$usn."' and Password='".$password."'";
    $stmt=$this->pdo->prepare($query);
    $stmt->execute();
 if($stmt)
