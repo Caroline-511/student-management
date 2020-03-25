@@ -53,7 +53,7 @@ try
 	$usr='pngpwmkkjntvqf';
 	$port="5432";
 	$password="38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
-	$conn=new PDO("pgsql:host=$host;dbname=$dbname",$usr,$password);
+	$conn=pg_connect("dbname=$dbname");
 }
 catch(PDOException $e)
 {
