@@ -43,9 +43,9 @@ try
 	$usr='pngpwmkkjntvqf';
 	$port="5432";
 	$password="38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
-	$conn=pg_connect("dbname=$dbname host=$host usr=$usr port=$port password=$password");
+	$conn=new PDO("pgsql:host=$host;dbname=$dbname",$usr,$password);
 }
-catch(PgException $e)
+catch(PDOException $e)
 {
 	echo "Error : " .$e->getMessage() . "<br/>";
 	die();
