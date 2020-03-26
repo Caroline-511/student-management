@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost","root","");
+/*$conn=mysqli_connect("localhost","root","");
 $db=mysqli_select_db($conn,"student");
 if($db)
 {
@@ -7,7 +7,18 @@ if($db)
 }
 else{
 	echo "not connected";
-}
+}*/
+
+	$host="ec2-34-200-101-236.compute-1.amazonaws.com";
+	$dbname="d6i1p71shucj0g";
+	$usr='pngpwmkkjntvqf';
+	$port="5432";
+	$password="38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
+	$conn=pg_connect("host=$host dbname=$dbname user=$usr port=$port password=$password");
+	if (!$conn) {
+ echo "An error occurred.\n";
+ exit;
+	}
 ?>
 
 
@@ -21,7 +32,8 @@ if(isset($_POST['submit']))
     $attend=$_POST['att'];
     $percent=$_POST['per'];
         //updating the table
-       $result = mysqli_query($conn, "UPDATE att SET Subjects='$sub',Class_Held='$held',Class_attended='$attend',Percentage='$percent' WHERE id='$id'");
+       $query ="UPDATE att SET Subjects='$sub',Class_Held='$held',Class_attended='$attend',Percentage='$percent' WHERE id='$id'";
+	   $res=pg_query($conn,$query);
         
         //redirectig to the display page. In our case, it is index.php
       header("Location:add.php?usn=$usn");
@@ -34,10 +46,9 @@ if(isset($_POST['submit']))
 $id = $_GET['id'];
  
 //selecting data associated with this particular id
-$result = mysqli_query($conn, "SELECT * FROM att WHERE id='$id'");
+$result = pg_query($conn, "SELECT * FROM att WHERE id='$id'");
  
-while($res = mysqli_fetch_array($result))
-{
+while ($row = pg_fetch_row($result)) {
 $usn=$res['USN'];
 $sub=$res['Subjects'];
 $held=$res['Class_Held'];

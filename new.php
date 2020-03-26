@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost","root","");
+/*$conn=mysqli_connect("localhost","root","");
 $db=mysqli_select_db($conn,"student");
 if($db)
 {
@@ -7,7 +7,18 @@ if($db)
 }
 else{
 echo "not connected";
-}
+}*/
+
+$host="ec2-34-200-101-236.compute-1.amazonaws.com";
+	$dbname="d6i1p71shucj0g";
+	$usr='pngpwmkkjntvqf';
+	$port="5432";
+	$password="38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
+	$conn=pg_connect("host=$host dbname=$dbname user=$usr port=$port password=$password");
+	if (!$conn) {
+ echo "An error occurred.\n";
+ exit;
+	}
 ?>
 
 
@@ -22,10 +33,10 @@ $sub=$_POST['sub'];
 $held=$_POST['held'];
 $attend=$_POST['att'];
 $percent=$_POST['per'];
- $sql="INSERT into att(USN,Subjects,Class_Held,Class_attended,Percentage) values('$usn','$sub','$held','$attend','$percent')";
- $qry=mysqli_query($conn,$sql);
+ $sql="INSERT into att(usn,subjects,class_held,class_att,percentage) values('$usn','$sub','$held','$attend','$percent')";
+ $qry=pg_query($conn,$sql);
  if(!$qry)
-echo mysqli_error($conn);
+echo "Error";
 else
 echo "Success";  
      //header('Location: add.php?USN='.$usn);  
