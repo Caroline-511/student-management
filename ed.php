@@ -46,9 +46,9 @@ if(isset($_POST['submit']))
 $id = $_GET['id'];
  
 //selecting data associated with this particular id
-$result = pg_query($conn, "SELECT * FROM att WHERE id='$id'");
+$res = pg_query($conn, "SELECT * FROM att WHERE id='$id'");
  
-while ($row = pg_fetch_row($result)) {
+while ($row = pg_fetch_row($res)) {
 $usn=$res['usn'];
 $sub=$res['subjects'];
 $held=$res['class_held'];
