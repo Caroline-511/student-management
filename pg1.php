@@ -32,11 +32,14 @@ echo "Success";
 ?>
 
 <?php
-/*try{
 	$conn_string="host=ec2-34-200-101-236.compute-1.amazonaws.com dbname=d6i1p71shucj0g usr=pngpwmkkjntvqf port=5432 password=38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
 	$conn=pg_connect($conn_string);
-}*/
-try
+	if (!$conn) {
+ echo "An error occurred.\n";
+ exit;
+}
+
+/*try
 {
 	$host="ec2-34-200-101-236.compute-1.amazonaws.com";
 	$dbname="d6i1p71shucj0g";
@@ -64,11 +67,11 @@ if(isset($_POST['submit']))
     $email=$_POST['email'];
     $password=$_POST['psw'];
    $query="INSERT into signup(usn,email,password) values('$usn,'$email','$password')";
-   //$result=pg_query($conn,$query);
-   $stmt=$conn->query($query);
+   $result=pg_query($conn,$query);
+   //$stmt=$conn->query($query);
    //$stmt->execute();
-if(!$stmt)
- echo $conn->errorCode();
+if(!$result)
+ echo "error occured ------------------";
 else
 	header('Location:index.php');
 }
