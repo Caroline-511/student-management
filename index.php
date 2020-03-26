@@ -46,11 +46,16 @@ if($usn!=''&&$password!='')
 
 
 <?php
-try{
-	$conn_string="host=ec2-34-200-101-236.compute-1.amazonaws.com dbname=d6i1p71shucj0g usr=pngpwmkkjntvqf port=5432 password=38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
-	$conn=pg_connect($conn_string);
+try
+{
+	$host="ec2-34-200-101-236.compute-1.amazonaws.com";
+	$dbname="d6i1p71shucj0g";
+	$usr='pngpwmkkjntvqf';
+	$port="5432";
+	$password="38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
+	$conn=new PDO("pgsql:host=$host;dbname=$dbname",$usr,$password);
 }
-catch(PgException $e)
+catch(PDOException $e)
 {
 	echo "Error : " .$e->getMessage() . "<br/>";
 	die();
