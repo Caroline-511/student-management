@@ -31,7 +31,7 @@ if (isset($_POST['submit']))
      $password=$_POST['psw'];
 if($email!=''&&$password!='')
  {
-   $query="select * from admin where Email='".$email."' and Password='".$password."'";
+   $query="select * from admin where email='".$email."' and password='".$password."'";
    $res=pg_query($conn,$query);
    if($res)
    {
