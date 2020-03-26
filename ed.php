@@ -49,11 +49,11 @@ $id = $_GET['id'];
 $result = pg_query($conn, "SELECT * FROM att WHERE id='$id'");
  
 while ($row = pg_fetch_row($result)) {
-$usn=$res['USN'];
-$sub=$res['Subjects'];
-$held=$res['Class_Held'];
-$attend=$res['Class_attended'];
-$percent=$res['Percentage'];	
+$usn=$res['usn'];
+$sub=$res['subjects'];
+$held=$res['class_held'];
+$attend=$res['class_att'];
+$percent=$res['percentage'];	
 }
 
 ?>
