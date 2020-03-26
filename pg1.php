@@ -44,7 +44,7 @@ echo "Success";
 	$usr='pngpwmkkjntvqf';
 	$port="5432";
 	$password="38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
-	$conn=pg_connect("host=$host dbname=$dbname usr=$usr port=$port password=$password");
+	$conn=pg_connect("host=$host dbname=$dbname user=$usr port=$port password=$password");
 	if (!$conn) {
  echo "An error occurred.\n";
  exit;
