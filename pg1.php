@@ -66,7 +66,7 @@ if(isset($_POST['submit']))
    $query="INSERT into signup(usn,email,password) values('$usn,'$email','$password')";
    //$result=pg_query($conn,$query);
    $stmt=$conn->query($query);
-   $stmt->execute();
+   //$stmt->execute();
 if(!$stmt)
  echo $conn->errorCode();
 else
