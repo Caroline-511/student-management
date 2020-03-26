@@ -32,8 +32,8 @@ if(isset($_POST['submit']))
     $attend=$_POST['att'];
     $percent=$_POST['per'];
         //updating the table
-       $query ="UPDATE att SET Subjects='$sub',Class_Held='$held',Class_attended='$attend',Percentage='$percent' WHERE id='$id'";
-	   $res=pg_query($conn,$query);
+       $query ="UPDATE att SET subjects='$sub',class_held='$held',class_att='$attend',percentage='$percent' WHERE id='$id'";
+	   $result=pg_query($conn,$query);
         
         //redirectig to the display page. In our case, it is index.php
       header("Location:add.php?usn=$usn");
