@@ -46,11 +46,11 @@ if($usn!=''&&$password!='')
 
 
 <?php
-	$host="ec2-34-200-101-236.compute-1.amazonaws.com";
-	$dbname="d6i1p71shucj0g";
-	$usr='pngpwmkkjntvqf';
+	$host="ec2-50-17-21-170.compute-1.amazonaws.com";
+	$dbname="dagq0b4vmo71ku";
+	$usr='gontirrwmyhutv';
 	$port="5432";
-	$password="38889841dfdd9fb9c512f660ac9adc51072b4170904ac0a6277eb14c018866cb";
+	$password="668b6e5161e5341b077dd457b61fe9e8b3c5cce4e2c389d6ad2ad198bf25af6d";
 	$conn=pg_connect("host=$host dbname=$dbname user=$usr port=$port password=$password");
 	if (!$conn) {
  echo "An error occurred.\n";
