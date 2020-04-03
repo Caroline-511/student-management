@@ -47,13 +47,17 @@ $id = $_GET['id'];
  
 //selecting data associated with this particular id
 $result = pg_query($conn, "SELECT * FROM att WHERE id='$id'");
- 
+$resultcheck=pg_num_rows($result);
+
+if(($resultcheck)>0)
+{
 while ($res = pg_fetch_row($result)) {
 $usn=$res['usn'];
 $sub=$res['subjects'];
 $held=$res['class_held'];
 $attend=$res['class_att'];
 $percent=$res['percentage'];	
+}
 }
 
 ?>
