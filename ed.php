@@ -51,12 +51,12 @@ $resultcheck=pg_num_rows($result);
 
 if(($resultcheck)>0)
 {
-while ($res = pg_fetch_row($result)) {
-$usn=$res['usn'];
-$sub=$res['subjects'];
-$held=$res['class_held'];
-$attend=$res['class_att'];
-$percent=$res['percentage'];	
+while ($rows = pg_fetch_row($result)) {
+$usn=$rows['usn'];
+$sub=$rows['subjects'];
+$held=$rows['class_held'];
+$attend=$rows['class_att'];
+$percent=$rows['percentage'];	
 }
 }
 
