@@ -51,7 +51,7 @@ $resultcheck=pg_num_rows($result);
 
 if(($resultcheck)>0)
 {
-while ($row = pg_fetch_row($result)) {
+while ($row = pg_fetch_assoc($result)) {
 $usn=$row['usn'];
 $sub=$row['subjects'];
 $held=$row['class_held'];
