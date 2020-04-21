@@ -32,7 +32,7 @@ if(isset($_POST['submit']))
     $attend=$_POST['att'];
     $percent=$_POST['per'];
         //updating the table
-       $query ="UPDATE att SET subjects='$sub',class_held='$held',class_att='$attend',percentage='$percent' WHERE id='$id'";
+       $query ="UPDATE att SET subjects='$sub',class_held='$held',class_att='$attend',percentage=('$held'/'$attend)*100 WHERE id='$id'";
 	   $result=pg_query($conn,$query);
         
         //redirectig to the display page. In our case, it is index.php
