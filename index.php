@@ -80,11 +80,12 @@ if($usn!=''&&$password!='')
    $result=pg_query($conn,$query);
    //$stmt=$this->pdo->prepare($result);
    //$stmt->execute();
-if($result==1)
+if($result)
 {
     $_SESSION['usn']=$usn;
     header('location:icon.php?usn='.$usn);
-   }
+	?>
+   <?php }
    else
    {?>
 <script>
