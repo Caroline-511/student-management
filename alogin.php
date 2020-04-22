@@ -31,7 +31,8 @@ if($email!=''&&$password!='')
  {
    $query="select * from admin where email='".$email."' and password='".$password."'";
    $res=pg_query($conn,$query);
-   if($res)
+      $count=pg_affected_rows($res);
+   if($count!=0)
    {
     $_SESSION['usn']=$usn;
     header('location:add.php?usn='.$usn);
