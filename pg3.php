@@ -159,13 +159,17 @@ while ($row = pg_fetch_row($result)) {
     <td><?php  echo $row[4]; ?></td>
      <td><?php echo $row[5]; ?></td>
   <?php
-  if($row[5]>=75)
+  if($row[5]==100)
   {
 	  ?>
 	  <td><?php echo "ELIGIBLE";?></td>
   <?php
   }
   ?>
+  <?php 
+  else ?>
+  	  <td><?php echo "NOT ELIGIBLE";?></td>
+
   </tr>
 	  
   <?php
