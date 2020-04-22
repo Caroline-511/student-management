@@ -68,7 +68,7 @@ if($usn!=''&& $password!='')
  {
 	$query="select * from signup where usn='".$usn."' and password='".$password."'";
    $result=pg_query($conn,$query);
-   $count=pg_num_rows($res);
+   $count=pg_affected_rows($res);
    //$stmt=$this->pdo->prepare($result);
    //$stmt->execute();
 if($count!=0)
