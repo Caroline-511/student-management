@@ -164,9 +164,6 @@ while ($row = pg_fetch_row($result)) {
   {
 	  ?>
 	  <td><?php echo "ELIGIBLE";?></td>
-	  <?php 
-	  else ?>
-	  <td><?php echo "NOT ELIGIBLE";?></td>
   <?php
   }
   ?>
