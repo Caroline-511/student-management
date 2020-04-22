@@ -167,8 +167,9 @@ while ($row = pg_fetch_row($result)) {
   }
   ?>
   <?php 
-  else ?>
+  else {?>
   	  <td><?php echo "NOT ELIGIBLE";?></td>
+  <?php } ?>
 
   </tr>
 	  
