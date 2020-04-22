@@ -93,10 +93,6 @@ if($result)
 	<?php
    }
  }
- else
- {
-  echo'Enter both username and password';
- }
 }
 ?>
 
