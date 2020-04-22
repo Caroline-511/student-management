@@ -87,6 +87,7 @@ $host="ec2-50-17-21-170.compute-1.amazonaws.com";
     <th>CLASSES HELD</th>
     <th>CLASSES ATTENDED</th>
     <th>PERCENTAGE</th>
+	<th>ELIGIBILITY</th>
 	</thead>
   </tr>
   <!--<tr>
@@ -158,7 +159,15 @@ while ($row = pg_fetch_row($result)) {
     <td><?php  echo $row[4]; ?></td>
      <td><?php echo $row[5]; ?></td>
 	 </tr>
-  
+  <?php
+  if($row[5]>=75)
+  {
+	  ?>
+	  <td><?php echo "ELIGIBLE";?></td>
+	  <?php 
+	  else ?>
+	  <td><?php echo "NOT ELIGIBLE";?></td>
+	  
   <?php
  }   
 ?>
