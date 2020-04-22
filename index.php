@@ -82,12 +82,15 @@ if($usn!=''&&$password!='')
    //$stmt->execute();
 if($result)
 {
-    $_SESSION['usn']=$usn;
+    //$_SESSION['usn']=$usn;
     header('location:icon.php?usn='.$usn);
- }
+   }
    else
-   {
-    echo "Entered username and password is incorrect";
+   {?>
+<script>
+    alert ("Entered Username and password is incorect");
+	</script>
+	<?php
    }
  }
  else
