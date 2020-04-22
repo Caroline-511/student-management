@@ -158,7 +158,6 @@ while ($row = pg_fetch_row($result)) {
    <td><?php   echo $row[3]; ?></td>
     <td><?php  echo $row[4]; ?></td>
      <td><?php echo $row[5]; ?></td>
-	 </tr>
   <?php
   if($row[5]>=75)
   {
@@ -167,6 +166,7 @@ while ($row = pg_fetch_row($result)) {
   <?php
   }
   ?>
+  </tr>
 	  
   <?php
  }   
