@@ -84,14 +84,10 @@ if($result)
 {
     $_SESSION['usn']=$usn;
     header('location:icon.php?usn='.$usn);
-	?>
-   <?php }
+ }
    else
-   {?>
-<script>
-    alert ("Entered Username and password is incorect");
-	</script>
-	<?php
+   {
+    echo "Entered username and password is incorrect";
    }
  }
  else
