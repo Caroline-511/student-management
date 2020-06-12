@@ -223,6 +223,14 @@ fieldset{
 	border-radius:40px;
 }
 
+.box h1
+{
+	position:absolute;
+	text-shadow: 2px 2px blue;
+	margin-top:4%;
+	margin-left:4%;
+}
+
 body {
  background-image: url("nitte.jpg");
  background-attachment:fixed;
@@ -281,6 +289,7 @@ body {
 }
 
 </style>
+<div class="box">
   <body> <!-- id="body-color" style="background:url(img1.jpg); background-repeat:no-repeat;background-size:100%">-->
 
     <!--<div class="sidenav">
@@ -293,7 +302,7 @@ body {
     <div id="myNav" class="overlay">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<div class="overlay-content">
-        <a href="alogin.php">Login</a><br/>
+        <a href="index.php">Login</a><br/>
         <a href="http://guru.nmamit.in" target="_blank">Moodle</a><br/>
         <a href="http://www.nmamit.nitte.edu.in" target="_blank">College Homepage</a><br/>
 		<a href="about.php">About Us</a><br/>
@@ -335,4 +344,5 @@ function closeNav() {
 </script>
 
 </body>
+</div>
 </html>
