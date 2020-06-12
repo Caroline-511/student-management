@@ -307,7 +307,7 @@ $result = pg_query($conn,$query);
   //if ($result) {
 while ($row = pg_fetch_row($result)) {
 		
-$name=$row['name'];
+/*$name=$row['name'];
 $branch=$row['branch'];
 $usn=$row['usn'];
 $adm=$row['admission'];
@@ -318,14 +318,14 @@ $email=$row['email'];
 $mob=$row['mobile'];
 $parent=$row['parentmob'];
 $em2=$row['parentemailmail'];
-}
+}*/
 ?>
 
 <div class="hi">
     <form name="form1" method="post" action="">
 	<center>
 	<br/><br/><br/>
-	<legend><h1 class="b1"><?php echo $name; ?></h1><br/><br/><br/><br/></legend>
+	<legend><h1 class="b1"><?php echo $row[1]; ?></h1><br/><br/><br/><br/></legend>
         <table border="0">
             <tr>
 			<td><span><b>NAME</b></span><br/><br/></td>
@@ -377,7 +377,9 @@ $em2=$row['parentemailmail'];
 		</center>
 		</div>
     </form>
-
+<?php
+  }
+  ?>
 
 	
 <script>
