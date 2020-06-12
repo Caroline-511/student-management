@@ -1,6 +1,0 @@
-[0326/124306.788:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value 3c269ce2-888e-493b-ab0e-d9e710497037
-[0411/102127.887:ERROR:crash_report_database_win.cc(429)] unexpected header
-[0411/103127.956:ERROR:crash_report_database_win.cc(429)] unexpected header
-[0411/103127.967:ERROR:crash_report_database_win.cc(429)] unexpected header
-[0411/103627.984:ERROR:file_io.cc(36)] ReadFile: Error (0x3E9) while retrieving error. (0x5AA)
-[0411/103628.060:ERROR:crash_report_database_win.cc(424)] failed to read header

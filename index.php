@@ -214,22 +214,40 @@ mark1{
 }
 
 fieldset{
-    background-color:snow;
+    background-color:white;
+    filter:alpha(opacity=8); /* IE */
+    -moz-opacity:0.9; /* Mozilla */
     opacity:0.9;
+	width:575px;
+    margin-left:700px;
+	border-radius:40px;
 }
+
 
 </style>
   <body id="body-color" style="background:url(img1.jpg); background-repeat:no-repeat;background-size:100%">
 
-    <div class="sidenav">
+    <!--<div class="sidenav">
        <br/><br/> <a href="index.php">Login</a><br/><br/>
         <a href="http://guru.nmamit.in" target="_blank">Moodle</a><br/><br/>
         <a href="http://www.nmamit.nitte.edu.in" target="_blank">College Homepage</a><br/><br/>
-      </div>
+      </div>-->
+	  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <div id="myNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div class="overlay-content">
+        <a href="alogin.php">Login</a><br/>
+        <a href="http://guru.nmamit.in" target="_blank">Moodle</a><br/>
+        <a href="http://www.nmamit.nitte.edu.in" target="_blank">College Homepage</a><br/>
+		<a href="about.php">About Us</a><br/>
+		<a href=" ">View Profile</a><br/>
+    </div>
+	</div>
 
 <form action="" method="POST">
   <div class="container"></div>
-    <fieldset class="f1"><legend><b><h1>LOGIN</h1></b></legend><br/><br/>
+    <fieldset><legend><b><h1>LOGIN</h1></b></legend><br/><br/>
 
     <label for="usn"><b>USN</b></label>
     <input type="text" placeholder="Enter USN" name="usn" required>
@@ -247,6 +265,18 @@ fieldset{
     </div>
     </fieldset>
 </form>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "40%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+
+</script>
 
 </body>
 </html>
