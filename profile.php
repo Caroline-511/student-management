@@ -71,7 +71,7 @@ $pm=$_POST['em2'];
    //$stmt=$conn->query($query);
    //$stmt->execute();
 if(!$result)
- echo "error occured";
+ echo "Error";
 else
 	echo "Success";
 	//header('Location:index.php');
