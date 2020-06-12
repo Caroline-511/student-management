@@ -324,7 +324,6 @@ body {
 
 
 </head>
-<div class="box">
   <body> <!--id="body-color" style="background:url(nitte.jpg); background-repeat:no-repeat;background-size:100% 100%" >-->
   
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -351,7 +350,7 @@ body {
    </fieldset>
    </div>
 
-
+<div class="box">
 <form action="" method="POST">
   <div class="container"></div>
     <fieldset><legend><h1>PROFILE-DETAILS</h1></legend><br/><br/><br/><br/><br/><br/><br/><br/>
