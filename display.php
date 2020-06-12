@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost","root","");
+/*$conn=mysqli_connect("localhost","root","");
 $db=mysqli_select_db($conn,"student");
 if($db)
 {
@@ -7,9 +7,21 @@ if($db)
 }
 else{
 	echo "not connected";
-}
+}*/
 ?>
 
+<?php
+$host="ec2-50-17-21-170.compute-1.amazonaws.com";
+	$dbname="dagq0b4vmo71ku";
+	$usr='gontirrwmyhutv';
+	$port="5432";
+	$password="668b6e5161e5341b077dd457b61fe9e8b3c5cce4e2c389d6ad2ad198bf25af6d";
+	$conn=pg_connect("host=$host dbname=$dbname user=$usr port=$port password=$password");
+	if (!$conn) {
+ echo "An error occurred.\n";
+ exit;
+	}
+?>
 
 
 <!DOCTYPE html>
@@ -289,21 +301,23 @@ if(isset($_GET['usn'])){
       $usn = "USN not set in GET Method";
  }
  
-$query = "SELECT * FROM profile WHERE USN='4NM17CS048'";
-$result = mysqli_query($conn,$query);
-while($row=mysqli_fetch_array($result))
-{
-$name=$row['Name'];
-$branch=$row['Branch'];
-$usn=$row['USN'];
-$adm=$row['Admission_Year'];
-$dob=$row['DOB'];
-$blood=$row['Blood_Group'];
-$adr=$row['Address'];
-$email=$row['Email'];
-$mob=$row['Mobile_No'];
-$parent=$row['Parent_Mob'];
-$em2=$row['Parent_Email'];
+$query = "SELECT * FROM profile WHERE usn='$usn'";
+$result = pg_query($conn,$query);
+  
+  //if ($result) {
+while ($row = pg_fetch_row($result)) {
+		
+$name=$row['name'];
+$branch=$row['branch'];
+$usn=$row['usn'];
+$adm=$row['admission'];
+$dob=$row['dob'];
+$blood=$row['blood'];
+$adr=$row['address'];
+$email=$row['email'];
+$mob=$row['mobile'];
+$parent=$row['parentmob'];
+$em2=$row['parentemailmail'];
 }
 ?>
 

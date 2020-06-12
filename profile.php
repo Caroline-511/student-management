@@ -72,9 +72,9 @@ $pm=$_POST['em2'];
    //$stmt->execute();
 if(!$result)
  echo "Error";
-else
+/*else
 	echo "Success";
-	//header('Location:index.php');
+	header('Location:index.php');*/
 }
 ?>
 
