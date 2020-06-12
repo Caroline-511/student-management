@@ -136,7 +136,7 @@ body {
 <div id="myNav" class="overlay">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<div class="overlay-content">
-        <a href="alogin.php">Login</a><br/>
+        <a href="index.php">Login</a><br/>
         <a href="http://guru.nmamit.in" target="_blank">Moodle</a><br/>
         <a href="http://www.nmamit.nitte.edu.in" target="_blank">College Homepage</a><br/>
 		<a href="about.php">About Us</a><br/>
