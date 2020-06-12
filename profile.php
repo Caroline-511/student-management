@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost","root","");
+/*$conn=mysqli_connect("localhost","root","");
 $db=mysqli_select_db($conn,"student");
 if($db)
 {
@@ -35,37 +35,48 @@ echo mysqli_error($conn);
 else
 echo "Success";  
      //header('Location:display.php?usn='.$usn);  
-}
+}*/
 ?>
 
 <?php
-
-if(isset($_POST['Submit1'])){
- 
-  $name = $_FILES['file']['name'];
-  $target_dir = "C:\wamp64\www\php\web";
-  $target_file = $target_dir . basename($_FILES["file"]["name"]);
-
-  // Select file type
-  $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
-  // Valid file extensions
-  $extensions_arr = array("jpg","jpeg","png","gif");
-
-  // Check extension
-  if( in_array($imageFileType,$extensions_arr) ){
- 
-     // Insert record
-     $query = "insert into images(Name)values('".$name."')";
-     mysqli_query($conn,$query);
-  
-     // Upload file
-     move_uploaded_file($_FILES['file']['tmp_name'],$target_dir.$name);
-  }
+	$host="ec2-50-17-21-170.compute-1.amazonaws.com";
+	$dbname="dagq0b4vmo71ku";
+	$usr='gontirrwmyhutv';
+	$port="5432";
+	$password="668b6e5161e5341b077dd457b61fe9e8b3c5cce4e2c389d6ad2ad198bf25af6d";
+	$conn=pg_connect("host=$host dbname=$dbname user=$usr port=$port password=$password");
+	if (!$conn) {
+ echo "An error occurred.\n";
+ exit;
+	}
+	?>
+	
+	<?php
+	if(isset($_POST['submit']))
+{
+$name=$_POST['name'];
+$branch=$_POST['branch'];
+$usn=$_POST['usn'];
+$adm=$_POST['year'];
+$dob=$_POST['dob'];
+$blood=$_POST['bg'];
+$adr=$_POST['adr'];
+$email=$_POST['email'];
+$mob=$_POST['num'];
+$parent=$_POST['num1'];
+$pm=$_POST['em2'];
+	$query="INSERT into profile(name,branch,usn,admission,dob,blood,address,email,mobile,parentmob,parentmail) values('$name','$branch','$usn','$adm',
+        '$dob','$blood','$adr','$email','$mob','$parent','$pm')";
+   $result=pg_query($conn,$query);
+   //$stmt=$conn->query($query);
+   //$stmt->execute();
+if(!$result)
+ echo "error occured";
+else
+	echo "Success";
+	//header('Location:index.php');
 }
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -328,10 +339,10 @@ body {
     </div>
 	</div>
 
-<div class="x1">
+<!--<div class="x1">
     <fieldset class="f2"><legend><b><h2 class="x1">UPLOAD PHOTO</h2></b></legend><br/><br/><br/><br/><br/><br/>
 	<input type="file" name="file"><br/>
-<button type="submit" class="signupbtn" name="Submit1">Add</button><br/>
+<button type="submit" class="signupbtn" name="Submit1">Add</button><br/>-->
 
 	<!--<input type='file' name='file' class="p1" onchange="readURL(this)" >
    <img id="blah" >
