@@ -228,7 +228,7 @@ fieldset{
 	position:absolute;
 	text-shadow: 2px 2px blue;
 	margin-top:4%;
-	margin-left:4%;
+	margin-left:8%;
 }
 
 body {
@@ -312,7 +312,7 @@ body {
 
 <form action="" method="POST">
   <div class="container"></div>
-    <fieldset><legend><b><h1>LOGIN</h1></b></legend><br/><br/>
+    <fieldset><legend><b><h1>LOGIN</h1></b></legend><br/><br/><br/><br/><br/><br/>
 
     <label for="usn"><b>USN</b></label>
     <input type="text" placeholder="Enter USN" name="usn" required>
