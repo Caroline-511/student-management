@@ -70,16 +70,9 @@ $host="ec2-50-17-21-170.compute-1.amazonaws.com";
   background-color: cornflowerblue  ;
 }
 
-body {
- background-image: url("nitte.jpg");
- background-attachment:fixed;
- background-repeat:no-repeat;
- background-size:100%;
-}
-
 </style>
 </head>
-<body>
+<body id="body-color" style="background:url(img1.jpg); background-repeat:no-repeat;background-size:100%">
 
   <div class="navbar">
     <a href="index.php">Logout</a> 
