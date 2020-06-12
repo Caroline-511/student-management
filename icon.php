@@ -163,7 +163,7 @@ body {
                  <a href="pg4.php?usn=<?php echo $usn?>">
 	        <button type="submit" name="enter" class="signupbtn">Marks</button>
 			
-			<img src="view.jpg" class="d2" alt="View" style="width:300px;height:270px;border:0;">
+			<img src="view.jpg" class="d1" alt="View" style="width:300px;height:270px;border:0;">
     
             <a href="display.php?usn=<?php echo $usn?>">
 	        <button type="submit" name="sub" class="signupbtn">Profile</button>
