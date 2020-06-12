@@ -179,18 +179,97 @@ mark1{
 }
 
 fieldset{
-    background-color:snow;
+    background-color:white;
+    filter:alpha(opacity=8); /* IE */
+    -moz-opacity:0.9; /* Mozilla */
     opacity:0.9;
+	width:575px;
+    margin-left:700px;
+	border-radius:40px;
+}
+
+.box h1
+{
+	position:absolute;
+	text-shadow: 2px 2px blue;
+	margin-top:2%;
+	margin-left:15%;
+}
+
+body {
+ background-image: url("nitte.jpg");
+ background-attachment:fixed;
+ background-repeat:no-repeat;
+ background-size:100%;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
 }
 
 </style>
-  <body id="body-color" style="background:url(img1.jpg); background-repeat:no-repeat;background-size:100%">
+<div class="box">
+  <body>
 
-    <div class="sidenav">
-       <br/><br/> <a href="alogin.php">Login</a><br/><br/>
-        <a href="http://guru.nmamit.in" target="_blank">Moodle</a><br/><br/>
-        <a href="http://www.nmamit.nitte.edu.in" target="_blank">College Homepage</a><br/><br/>
-      </div>
+    	 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <div id="myNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div class="overlay-content">
+        <a href="index.php">Login</a><br/>
+        <a href="http://guru.nmamit.in" target="_blank">Moodle</a><br/>
+        <a href="http://www.nmamit.nitte.edu.in" target="_blank">College Homepage</a><br/>
+		<a href="about.php">About Us</a><br/>
+		<a href=" ">View Profile</a><br/>
+    </div>
+	</div>
+
 
 <form action="" method="POST">
   <div class="container"></div>
@@ -218,5 +297,17 @@ fieldset{
     </fieldset>
 </form>
 
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "40%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+</div>
 </body>
 </html>
