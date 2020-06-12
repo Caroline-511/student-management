@@ -65,7 +65,7 @@ $email=$_POST['email'];
 $mob=$_POST['num'];
 $parent=$_POST['num1'];
 $pm=$_POST['em2'];
-	$query="INSERT into profile(name,branch,usn,admission,dob,blood,address,email,mobile,parentmob,parentmail) values('$name','$branch','$usn','$adm',
+	$query="INSERT into profile(name,branch,usn,admission,dob,blood,address,email,mobile,parentmob,parentemail) values('$name','$branch','$usn','$adm',
         '$dob','$blood','$adr','$email','$mob','$parent','$pm')";
    $result=pg_query($conn,$query);
    //$stmt=$conn->query($query);
