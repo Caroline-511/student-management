@@ -67,7 +67,7 @@ margin-bottom:0% ;
 .fa-lock{
 position:absolute;
 margin-top:3%;
-margin-left:15%;
+margin-left:10%;
 color:blue;
 font-size: 40px;
 }
