@@ -186,7 +186,7 @@ fieldset{
 	position:absolute;
 	text-shadow: 2px 2px blue;
 	margin-top:2%;
-	margin-left:15%;
+	margin-left:12%;
 }
 
 body {
@@ -257,7 +257,7 @@ body {
     <div id="myNav" class="overlay">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<div class="overlay-content">
-        <a href="index.php">Login</a><br/>
+        <a href="alogin.php">Login</a><br/>
         <a href="http://guru.nmamit.in" target="_blank">Moodle</a><br/>
         <a href="http://www.nmamit.nitte.edu.in" target="_blank">College Homepage</a><br/>
 		<a href="about.php">About Us</a><br/>
@@ -266,7 +266,7 @@ body {
 
 <form action="" method="POST">
   <div class="container"></div>
-    <fieldset class="f1"><legend><b><h1>ADD DATA</h1></b></legend><br/><br/>
+    <fieldset class="f1"><legend><b><h1>ADD DATA</h1></b></legend><br/><br/><br/><br/><br/><br/>
 	
 	<label for="usn"><b>USN</b></label>
     <input type="text" placeholder="Enter USN" name="usn"  required>
