@@ -121,12 +121,18 @@ body {
   color: white;
 }
 
+body {
+ background-image: url("nitte.jpg");
+ background-attachment:fixed;
+ background-repeat:no-repeat;
+ background-size:100%;
+}
 
 </style>
 </head>
 
 <body>
-    <body id="body-color" style="background:url(img1.jpg); background-repeat:no-repeat;background-size:100%" ></body>
+    <body></body>
 
     <div class="navbar">
         <a href="pg1.php">Logout</a> 
