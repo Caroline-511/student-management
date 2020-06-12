@@ -329,11 +329,11 @@ $em2=$row['parentemailmail'];
         <table border="0">
             <tr>
 			<td><span><b>NAME</b></span><br/><br/></td>
-			<td><span><?php echo $name;?></span><br/><br/></td>
+			<td><span><?php echo $row[1];?></span><br/><br/></td>
             </tr>			
             <tr> 
                 <td><span><b>BRANCH</b></span><br/><br/></td>
-                <td><span><?php echo $branch;?></span><br/><br/></td>
+                <td><span><?php echo $row[2];?></span><br/><br/></td>
             </tr>
 			<tr> 
                 <td><span><b>USN</b></span><br/><br/></td>
@@ -341,35 +341,35 @@ $em2=$row['parentemailmail'];
             </tr>
 			<tr> 
                 <td><span><b>ADMISSION YEAR</b></span><br/><br/></td>
-                <td><span><?php echo $adm;?></span><br/><br/></td>
+                <td><span><?php echo $row[4];?></span><br/><br/></td>
             </tr>
 			<tr> 
                 <td><span><b>DATE OF BIRTH</b></span><br/><br/></td>
-                <td><span><?php echo $dob;?></span><br/><br/></td>
+                <td><span><?php echo $row[5];?></span><br/><br/></td>
             </tr>
 			<tr> 
                 <td><span><b>BLOOD GROUP</b></span><br/><br/></td>
-                <td><span><?php echo $blood;?></span><br/><br/></td>
+                <td><span><?php echo $row[6];?></span><br/><br/></td>
             </tr>
 			<tr> 
                 <td><span><b>ADDRESS</b></span><br/><br/></td>
-                <td><span><?php echo $adr;?></span><br/><br/></td>
+                <td><span><?php echo $row[7];?></span><br/><br/></td>
             </tr>
 			<tr> 
                 <td><span><b>EMAIL</b></span><br/><br/></td>
-                <td><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=<?php echo $email;?>" target="blank"><span><?php echo $email;?></span></a><br/><br/></td>
+                <td><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=<?php echo $row[8];?>" target="blank"><span><?php echo $row[8];?></span></a><br/><br/></td>
             </tr>
 			<tr> 
                 <td><span><b>STUDENT MOBILE</b></span><br/><br/></td>
-                <td><span><?php echo $mob;?></span><br/><br/></td>
+                <td><span><?php echo $row[9];?></span><br/><br/></td>
             </tr>
 			<tr> 
                 <td><b><span>PARENT MOBILE</b></span><br/><br/></td>
-                <td><span><?php echo $parent;?></span><br/><br/></td>
+                <td><span><?php echo $row[10];?></span><br/><br/></td>
             </tr>
 				<tr> 
                 <td><b><span>PARENT EMAIL</b></span><br/><br/></td>
-                <td><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=<?php echo $em2;?>" target="blank"><span><?php echo $em2;?></span></a><br/><br/></td>
+                <td><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=<?php echo $row[11];?>" target="blank"><span><?php echo $row[11];?></span></a><br/><br/></td>
             </tr>
 			<tr> 
             
