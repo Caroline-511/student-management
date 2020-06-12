@@ -227,8 +227,8 @@ fieldset{
 {
 	position:absolute;
 	text-shadow: 2px 2px blue;
-	margin-top:4%;
-	margin-left:8%;
+	margin-top:2%;
+	margin-left:15%;
 }
 
 body {
