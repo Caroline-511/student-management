@@ -87,10 +87,6 @@ margin-left:5%;
     margin-top:8%;
     margin-left:10%;
 }
-.d3{
-	margin-top:11%;
-	margin-left:15%;
-}
 
 .a7{
 	position:absolute;
@@ -167,7 +163,7 @@ body {
                  <a href="pg4.php?usn=<?php echo $usn?>">
 	        <button type="submit" name="enter" class="signupbtn">Marks</button>
 			
-			<img src="view.jpg" class="d3" alt="View" style="width:300px;height:270px;border:0;">
+			<img src="view.jpg" class="d2" alt="View" style="width:300px;height:270px;border:0;">
     
             <a href="display.php?usn=<?php echo $usn?>">
 	        <button type="submit" name="sub" class="signupbtn">Profile</button>
