@@ -151,11 +151,11 @@ body {
   <p>+91-0824-2204310/342/304/</p>
   <p>+91 9480812310</p>
   <p>+91 9480812312</p>
-  <p><b>Hostel / Security: </b><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=subiah@nitte.edu.in" target="blank">subiah@nitte.edu.in<p>
+  <p><b>Hostel / Security: </b><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=subiah@nitte.edu.in" target="blank">subiah@nitte.edu.in</a><p>
   <p>81470 71234</p>
   <p><b>Public Relations: </b> K.S Hegde Hospital</p>
   <p>+91 9740083240</p>
-  <p><b>Exam: </b><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=coe@nitte.edu.in" target="blank">coe@nitte.edu.in</p>
+  <p><b>Exam: </b><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=coe@nitte.edu.in" target="blank">coe@nitte.edu.in</a></p>
   <p>+91-0824-2203909</p>
 </div>
 
