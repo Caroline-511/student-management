@@ -147,7 +147,7 @@ body {
 <span style="font-size:30px;cursor:pointer" class="j1" onclick="openNav()">&#9776;</span>
 
   <h1>Campus Contacts</h1>
-  <p><b>Admission: </b> info@nitte.edu.in</p>
+  <p><b>Admission: </b><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@nitte.edu.in" target="blank"></a></p>
   <p>+91-0824-2204310/342/304/</p>
   <p>+91 9480812310</p>
   <p>+91 9480812312</p>
