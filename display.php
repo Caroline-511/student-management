@@ -288,6 +288,7 @@ body {
         <a href="http://guru.nmamit.in" target="_blank">Moodle</a><br/>
         <a href="http://www.nmamit.nitte.edu.in" target="_blank">College Homepage</a><br/>
 		<a href="about.php">About Us</a><br/>
+		<a href="index.php">Logout</a></br>
     </div>
 	</div>
 	</div>
