@@ -376,7 +376,7 @@ $em2=$row['parentemailmail'];
 			
 			<tr>
 			<td><b><span>Time Table</b></span><br/><br/></td>
-             <td><iframe src="/cassandra.pdf" width="100%" height="500px">
+             <td><iframe src="/timetable.pdf" width="100%" height="500px">
             </iframe></td>
             
         </table>
