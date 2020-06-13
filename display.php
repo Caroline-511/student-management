@@ -373,6 +373,11 @@ $em2=$row['parentemailmail'];
                 <td><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=<?php echo $row[11];?>" target="blank"><span><?php echo $row[11];?></span></a><br/><br/></td>
             </tr>
 			<tr> 
+			
+			<tr>
+			<td><b><span>Time Table</b></span><br/><br/></td>
+             <td><iframe src="C:\Users\hp\Documents\Doc_Files\cassandra.pdf" width="100%" height="500px">
+            </iframe></td>
             
         </table>
 		</center>
