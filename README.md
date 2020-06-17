@@ -18,7 +18,7 @@ g) Student attendance record
 h) Student profile
 i) Campus Contacts
 
-Technologu used
+Technolog used
 1. Front End Technology
  ● HTML
  ● CSS
