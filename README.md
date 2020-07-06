@@ -7,25 +7,27 @@ This application allows students to view their attendance, marks also allowing t
 authorities. Admin can add or delete student records.The system is also intended to provide better services to students,
 provide meaningful, consistent, and timely data and information.This system helps an institution to manage data,communications and scheduling. 
 
-Modules
-a) Student Login
-b) Icon Page
-c) View attendance
-d) View Marks
-e) View Profile
-f) Admin login
-g) Student attendance record
-h) Student profile
-i) Campus Contacts
+Modules<br/>
+a) Student Login<br/>
+b) Icon Page <br/>
+c) View attendance <br/>
+d) View Marks <br/>
+e) View Profile <br/>
+f) Admin login <br/>
+g) Student attendance record <br/>
+h) Student profile <br/>
+i) Campus Contacts <br/>
+<br/>
+Technology used<br/>
+1. Front End Technology <br/>
+ ● HTML <br/>
+ ● CSS <br/>
+ ● Bootstrap <br/>
+ ● Java Script <br/>
+2. Back End Technology <br/>
+ ● PHP <br/>
+ ● PostgreSQL <br/>
+3. Cloud Platform <br/>
+ ● Heroku <br/>
 
-Technology used
-1. Front End Technology
- ● HTML
- ● CSS
- ● Bootstrap
- ● Java Script
-2. Back End Technology
- ● PHP
- ● PostgreSQL
-3. Cloud Platform
- ● Heroku
+Website -- https://student-management-511.herokuapp.com/
